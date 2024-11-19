@@ -263,7 +263,6 @@ console.log(obj1.name); // xxx
 
 # 2. 数组的常用方法
 
-![image-20220726122853941](C:\Users\Hasee\AppData\Roaming\Typora\typora-user-images\image-20220726122853941.png)
 
 ## 一、操作方法
 
@@ -557,7 +556,6 @@ console.log(mapResult) // 2,4,6,8,10,8,6,4,2
 
 # 3. 字符串常用方法
 
-![image-20220726123002506](C:\Users\Hasee\AppData\Roaming\Typora\typora-user-images\image-20220726123002506.png)
 
 ## 一、操作方法
 
@@ -748,7 +746,6 @@ console.log(result); // "cond, bat, sat, fat"
 
 # 4. javascript中的类型转换机制
 
-![image-20220726123044978](C:\Users\Hasee\AppData\Roaming\Typora\typora-user-images\image-20220726123044978.png)
 
 ## 一、概述
 
@@ -784,7 +781,6 @@ let x = y ? 1 : a;
 
 先给出类型转换规则：
 
-![image-20220726123059024](C:\Users\Hasee\AppData\Roaming\Typora\typora-user-images\image-20220726123059024.png)
 
 实践一下：
 
@@ -832,7 +828,6 @@ parseInt('32a3') //32
 
 给出转换规则图：
 
-![image-20220726123113748](C:\Users\Hasee\AppData\Roaming\Typora\typora-user-images\image-20220726123113748.png)
 
 实践一下：
 
@@ -861,7 +856,6 @@ String([1, 2, 3]) // "1,2,3"
 
 可以将任意类型的值转为布尔值，转换规则如下：
 
-![image-20220726123124136](C:\Users\Hasee\AppData\Roaming\Typora\typora-user-images\image-20220726123124136.png)
 
 实践一下：
 
@@ -1237,7 +1231,6 @@ function deepClone(obj, hash = new WeakMap()) {
 
 下面首先借助两张图，可以更加清晰看到浅拷贝与深拷贝的区别
 
-![image-20220726123229941](C:\Users\Hasee\AppData\Roaming\Typora\typora-user-images\image-20220726123229941.png)
 
 从上图发现，浅拷贝和深拷贝都创建出一个新的对象，但在复制对象属性的时候，行为就不一样
 
@@ -2060,7 +2053,6 @@ bar()
 
 上述代码改变成一张图
 
-![image-20220726123335258](C:\Users\Hasee\AppData\Roaming\Typora\typora-user-images\image-20220726123335258.png)
 
 由于`JavaScript`遵循词法作用域，相同层级的 `foo` 和 `bar` 就没有办法访问到彼此块作用域中的变量，所以输出2
 
@@ -2133,7 +2125,6 @@ bar();
 
 把作用域比喻成一个建筑，这份建筑代表程序中的嵌套作用域链，第一层代表当前的执行作用域，顶层代表全局作用域
 
-![image-20220726123348425](C:\Users\Hasee\AppData\Roaming\Typora\typora-user-images\image-20220726123348425.png)
 
 变量的引用会顺着当前楼层进行查找，如果找不到，则会往上一层找，一旦到达顶层，查找的过程都会停止
 
@@ -2228,7 +2219,6 @@ var person = new Person('person')
 
 根据代码，我们可以得到下图
 
-![image-20220726123453255](C:\Users\Hasee\AppData\Roaming\Typora\typora-user-images\image-20220726123453255.png)
 
 下面分析一下：
 
@@ -2244,7 +2234,6 @@ var person = new Person('person')
 
 `__proto__`作为不同对象之间的桥梁，用来指向创建它的构造函数的原型对象的
 
-![image-20220726123507080](C:\Users\Hasee\AppData\Roaming\Typora\typora-user-images\image-20220726123507080.png)
 
 每个对象的`__proto__`都是指向它的构造函数的原型对象`prototype`的
 
@@ -2389,7 +2378,6 @@ console.log(instance1.getSuperValue()); // false
 console.log(instance2.getSuperValue()); // true 
 ```
 
-![image-20220718153404429](C:\Users\Hasee\AppData\Roaming\Typora\typora-user-images\image-20220718153404429.png)
 
 **原型链继承的问题**
 
@@ -2625,9 +2613,7 @@ SubType.prototype.sayAge = function () {
 
 它们都是SuperType的实例属性，但现在成为了SubType的原型属性。在调用SubType构造函数时，也会调用SuperType构造函数，这一次会在新对象上创建实例属性name和colors。这两个实例属性会遮蔽原型上同名的属性。图展示了这个过程。
 
-![image-20220718153531667](C:\Users\Hasee\AppData\Roaming\Typora\typora-user-images\image-20220718153531667.png)
 
-![image-20220718153548871](C:\Users\Hasee\AppData\Roaming\Typora\typora-user-images\image-20220718153548871.png)
 
 如图所示，有两组name和colors属性：一组在实例上，另一组在SubType的原型上。这是调用两次SuperType构造函数的结果。好在有办法解决这个问题。
 
@@ -2681,7 +2667,6 @@ SubType.prototype.sayAge = function () {
 
 下面以一张图作为总结：
 
-![image-20220726123548246](C:\Users\Hasee\AppData\Roaming\Typora\typora-user-images\image-20220726123548246.png)
 
 通过`Object.create` 来划分不同的继承方式，最后的寄生式组合继承方式是通过组合继承改造之后的最优继承方式，而 `extends` 的语法糖和寄生组合继承的方式基本类似
 
@@ -3609,7 +3594,6 @@ setTimeout( obj2.foo, 10 );
 
 下面给出全局上下文和函数上下文的例子：
 
-![image-20220726123636781](C:\Users\Hasee\AppData\Roaming\Typora\typora-user-images\image-20220726123636781.png)
 
 紫色框住的部分为全局上下文，蓝色和橘色框起来的是不同的函数上下文。只有全局上下文（的变量）能被其他任何上下文访问
 
@@ -3767,7 +3751,6 @@ FunctionExectionContext = {
 
 执行栈，也叫调用栈，具有 LIFO（后进先出）结构，用于存储在代码执行期间创建的所有执行上下文
 
-![image-20220726123734951](C:\Users\Hasee\AppData\Roaming\Typora\typora-user-images\image-20220726123734951.png)
 
 当`Javascript`引擎开始执行你第一行脚本代码的时候，它就会创建一个全局执行上下文然后将它压到执行栈中
 
@@ -3793,7 +3776,6 @@ console.log('Inside Global Execution Context');
 
 转化成图的形式
 
-![image-20220726123747319](C:\Users\Hasee\AppData\Roaming\Typora\typora-user-images\image-20220726123747319.png)
 
 简单分析一下流程：
 
@@ -3822,7 +3804,6 @@ console.log('Inside Global Execution Context');
 - 处于目标阶段(target phase)
 - 事件冒泡阶段(bubbling phase)
 
-![image-20220726123810441](C:\Users\Hasee\AppData\Roaming\Typora\typora-user-images\image-20220726123810441.png)
 
 事件冒泡是一种从下往上的传播方式，由最具体的元素（触发节点）然后逐渐向上传播到最不具体的那个节点，也就是`DOM`中最高层的父节点
 
@@ -4408,7 +4389,6 @@ t.sayName() // 'Tom'
 
 流程图如下：
 
-![image-20220726123853986](C:\Users\Hasee\AppData\Roaming\Typora\typora-user-images\image-20220726123853986.png)
 
 ## 三、手写new操作符
 
@@ -4548,7 +4528,6 @@ body`: 在 `XHR` 请求中要发送的数据体，如果不传递数据则为 `n
 
 关于`XMLHttpRequest.readyState`属性有五个状态，如下图显示
 
-![image-20220726123926416](C:\Users\Hasee\AppData\Roaming\Typora\typora-user-images\image-20220726123926416.png)
 
 只要 `readyState`属性值一变化，就会触发一次 `readystatechange` 事件
 
@@ -5411,7 +5390,6 @@ console.log(execUrlParams('test=a=b=c&&==&a='));//{test: "a=b=c", "": "=", a: ""
 
 ### 验证电话号码
 
-![image-20220720164648893](C:\Users\Hasee\AppData\Roaming\Typora\typora-user-images\image-20220720164648893.png)
 
 代码：
 
@@ -5427,7 +5405,6 @@ var checkPhone = (rule, value, callback) => {
 }
 ```
 
-![image-20220720164735284](C:\Users\Hasee\AppData\Roaming\Typora\typora-user-images\image-20220720164735284.png)
 
 
 
@@ -5446,7 +5423,6 @@ var checkPhone = (rule, value, callback) => {
 
 同步任务与异步任务的运行流程图如下：
 
-![image-20220726124042195](C:\Users\Hasee\AppData\Roaming\Typora\typora-user-images\image-20220726124042195.png)
 
 从上面我们可以看到，同步任务进入主线程，即主执行栈，异步任务进入任务队列，主线程内的任务执行完毕为空，会去任务队列读取对应的任务，推入主线程执行。上述过程的不断重复就事件循环
 
@@ -5514,7 +5490,6 @@ console.log(3)
 
 这时候，事件循环，宏任务，微任务的关系如图所示
 
-![image-20220726124054101](C:\Users\Hasee\AppData\Roaming\Typora\typora-user-images\image-20220726124054101.png)
 
 按照这个流程，它的执行机制是：
 
@@ -5937,7 +5912,6 @@ removed === self; // true
 
 浏览器的全部内容可以看成`DOM`，整个浏览器可以看成`BOM`。区别如下：
 
-![image-20220726124143457](C:\Users\Hasee\AppData\Roaming\Typora\typora-user-images\image-20220726124143457.png)
 
 ## 二、window
 
@@ -6019,15 +5993,12 @@ http://foouser:barpassword@www.wrox.com:80/WileyCDA/?q=javascript#contents
 
 下表列出了`navigator`对象接口定义的属性和方法：
 
-![image-20220726124226871](C:\Users\Hasee\AppData\Roaming\Typora\typora-user-images\image-20220726124226871.png)
 
-![image-20220726124314150](C:\Users\Hasee\AppData\Roaming\Typora\typora-user-images\image-20220726124314150.png)
 
 ## 五、screen
 
 保存的纯粹是客户端能力信息，也就是浏览器窗口外面的客户端显示器的信息，比如像素宽度和像素高度
 
-![image-20220726124348180](C:\Users\Hasee\AppData\Roaming\Typora\typora-user-images\image-20220726124348180.png)
 
 ## 六、history
 
@@ -6112,7 +6083,6 @@ pow(x, n) =
 
 也就是说`pow` 递归地调用自身 直到 `n == 1`
 
-![image-20220726124434893](C:\Users\Hasee\AppData\Roaming\Typora\typora-user-images\image-20220726124434893.png)
 
 为了计算 `pow(2, 4)`，递归变体经过了下面几个步骤：
 
@@ -6329,7 +6299,6 @@ for(let i = 0; i < array.length; i++) {
 
 即是一种描述集合和集合之间的转换关系，输入通过函数都会返回有且只有一个输出值
 
-![image-20220726124524906](C:\Users\Hasee\AppData\Roaming\Typora\typora-user-images\image-20220726124524906.png)
 
 可以看到，函数实际上是一个关系，或者说是一种映射，而这种映射关系是可以组合的，一旦我们知道一个函数的输出类型可以匹配另一个函数的输入，那他们就可以进行组合
 
@@ -6341,7 +6310,6 @@ for(let i = 0; i < array.length; i++) {
 
 纯函数是对给定的输入返还相同输出的函数，并且要求你所有的数据都是不可变的，即纯函数=无状态+数据不可变
 
-![image-20220726124539000](C:\Users\Hasee\AppData\Roaming\Typora\typora-user-images\image-20220726124539000.png)
 
 举一个简单的例子
 
@@ -6374,7 +6342,6 @@ test('double(2) 等于 4', () => {
 
 编程工作也就是在找一种映射关系，一旦关系找到了，问题就解决了，剩下的事情，就是让数据流过这种关系，然后转换成另一个数据，如下图所示
 
-![image-20220726124551498](C:\Users\Hasee\AppData\Roaming\Typora\typora-user-images\image-20220726124551498.png)
 
 在这里，就是高阶函数的作用。高级函数，就是以函数作为输入或者输出的函数被称为高阶函数
 
@@ -6674,7 +6641,6 @@ const num2 = calc(100,200) // 缓存得到的结果
 
 而计算机只能用二进制（0或1）表示，二进制转换为科学记数法的公式如下：
 
-![image-20220726124641096](C:\Users\Hasee\AppData\Roaming\Typora\typora-user-images\image-20220726124641096.png)
 
 其中，`a`的值为0或者1，e为小数点移动的位置
 
@@ -6682,7 +6648,6 @@ const num2 = calc(100,200) // 缓存得到的结果
 
 27.0转化成二进制为11011.0 ，科学计数法表示为：
 
-![image-20220726124649967](C:\Users\Hasee\AppData\Roaming\Typora\typora-user-images\image-20220726124649967.png)
 
 前面讲到，`javaScript`存储方式是双精度浮点数，其长度为8个字节，即64位比特
 
@@ -6694,7 +6659,6 @@ const num2 = calc(100,200) // 缓存得到的结果
 
 如下图所示：
 
-![image-20220726124702091](C:\Users\Hasee\AppData\Roaming\Typora\typora-user-images\image-20220726124702091.png)
 
 举个例子：
 
@@ -6960,7 +6924,6 @@ function debounce(func, wait, immediate) {
 
 如下图所示：
 
-![image-20220726124751281](C:\Users\Hasee\AppData\Roaming\Typora\typora-user-images\image-20220726124751281.png)
 
 ## 三、应用场景
 
