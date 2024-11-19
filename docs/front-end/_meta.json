@@ -1,0 +1,42 @@
+[
+  {
+    "type": "dir",
+    "name": "css",
+    "label": "Css"
+  },
+  {
+    "type": "dir",
+    "name": "html",
+    "label": "Html"
+  },
+  {
+    "type": "dir",
+    "name": "js",
+    "label": "js"
+  },
+  {
+    "type": "dir",
+    "name": "nodejs",
+    "label": "nodejs"
+  },
+  {
+    "type": "dir",
+    "name": "react",
+    "label": "react"
+  },
+  {
+    "type": "dir",
+    "name": "ts",
+    "label": "ts"
+  },
+  {
+    "type": "dir",
+    "name": "vue3",
+    "label": "vue3"
+  },
+  {
+    "type": "dir",
+    "name": "webpack",
+    "label": "webpack"
+  }
+]
